@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* Web Standardization Team, Author:JongWoon,LEE 2017.08.30 */
+
+/* Webfont: Arita-Dotum-Medium_OTF */
+@font-face {
+	font-family: 'Gotham';
+	font-style: normal;
+	font-weight: 300;
+	src: url('./Gotham/Gotham-Light.eot');
+	src: local("※"),url('./Gotham/Gotham-Light.eot?#iefix') format('embedded-opentype'),url('./Gotham/Gotham-Light.woff') format('woff'),url(./Gotham/Gotham-Light.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Gotham';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./Gotham/Gotham-Book.eot');
+	src: local("※"),url('./Gotham/Gotham-Book.eot?#iefix') format('embedded-opentype'),url('./Gotham/Gotham-Book.woff') format('woff'),url(./Gotham/Gotham-Book.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Gotham';
+	font-style: normal;
+	font-weight: 500;
+	src: url('./Gotham/Gotham-Medium.eot');
+	src: local("※"),url('./Gotham/Gotham-Medium.eot?#iefix') format('embedded-opentype'),url('./Gotham/Gotham-Medium.woff') format('woff'),url(./Gotham/Gotham-Medium.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Gotham';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./Gotham/Gotham-Bold.eot');
+	src: local("※"),url('./Gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'),url('./Gotham/Gotham-Bold.woff') format('woff'),url(./Gotham/Gotham-Bold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Gotham';
+	font-style: normal;
+	font-weight: 800;
+	src: url('./Gotham/Gotham-Black.eot');
+	src: local("※"),url('./Gotham/Gotham-Black.eot?#iefix') format('embedded-opentype'),url('./Gotham/Gotham-Black.woff') format('woff'),url(./Gotham/Gotham-Black.ttf) format('truetype');
+}

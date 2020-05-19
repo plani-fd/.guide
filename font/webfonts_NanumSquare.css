@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* Web Standardization Team, Author:JongWoon,LEE 2017.08.30 */
+
+/* 
+ * Nanum Square Web Fonts
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com) 
+ */ 
+@font-face {
+	font-family:'Nanum Square';
+	font-style:normal;
+	font-weight:300;
+	src:url(./NanumSquare/NanumSquareL.eot);
+	src:local('Nanum Square Light'),local('NanumSquareL'),url(./NanumSquare/NanumSquareL.eot?#iefix) format('embedded-opentype'),url(./NanumSquare/NanumSquareL.woff) format('woff'),url(./NanumSquare/NanumSquareL.ttf) format('truetype'),url(./NanumSquare/NanumSquareOTFLight.svg#017f9c78318bcde3d1dc4451e8eaca0a) format('svg');
+}
+@font-face {
+	font-family:'Nanum Square';
+	font-style:normal;
+	font-weight:400;
+	src:url(./NanumSquare/NanumSquareR.eot);
+	src:local('Nanum Square Regular'),local('NanumSquareR'),url(./NanumSquare/NanumSquareR.eot?#iefix) format('embedded-opentype'),url(./NanumSquare/NanumSquareR.woff2) format('woff2'),url(./NanumSquare/NanumSquareR.woff) format('woff'),url(./NanumSquare/NanumSquareR.ttf) format('truetype'),url(./NanumSquare/NanumSquareOTFR.svg#9e23ceb0c858ca37642ba540402577eb) format('svg');
+}
+@font-face {
+	font-family:'Nanum Square';
+	font-style:normal;
+	font-weight:700;
+	src:url(./NanumSquare/NanumSquareB.eot);
+	src:local('Nanum Square Bold'),local('NanumSquareB'),url(./NanumSquare/NanumSquareB.eot?#iefix) format('embedded-opentype'),url(./NanumSquare/NanumSquareB.woff2) format('woff2'),url(./NanumSquare/NanumSquareB.woff) format('woff'),url(./NanumSquare/NanumSquareB.ttf) format('truetype'),url(./NanumSquare/NanumSquareOTFB.svg#a41a1fda1fdf3dafd3394867a156b1cf) format('svg');
+}
+@font-face {
+	font-family:'Nanum Square';
+	font-style:normal;
+	font-weight:900;
+	src:url(./NanumSquare/NanumSquareEB.eot);
+	src:local('Nanum Square Extra Bold'),local('NanumSquareEB'),url(./NanumSquare/NanumSquareEB.eot?#iefix) format('embedded-opentype'),url(./NanumSquare/NanumSquareEB.woff) format('woff'),url(./NanumSquare/NanumSquareEB.ttf) format('truetype'),url(./NanumSquare/NanumSquareOTFExtraBold.svg#090d6763bc81b49309446d23fbd10e87) format('svg');
+}
