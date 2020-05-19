@@ -1,0 +1,290 @@
+@charset 'utf-8';
+@import '../../../css/scss/basic.scss';
+@import '../../../css/scss/default.scss';
+
+/*-------------------------------------------------
+title       : 가이드
+Author      : ㅈㅁㅈ
+Create date : 2019-04-03
+-------------------------------------------------*/
+
+.ui-datepicker {display: none;}
+
+#guide
+{
+    @include width(1460);
+
+    & > header 
+    {
+        @include bg1;
+        z-index: 2; margin-bottom: 6rem; color: #fff; text-align: center;
+
+        &::before {@include bg2(type1); background-color: #2f3643;}
+
+        h1 {padding: 5rem 0;}
+
+        nav 
+        {
+            @include fs(17);
+            position: absolute; left: auto; top: 100%; width: 25rem; margin-top: 7.5rem; color: #392d2d; text-align: left;
+
+            &.active {position: fixed; top: 0;}
+
+            small {display: none;}
+            ul {margin-top: 2rem; padding: 1rem 2rem; border-bottom: 0.3rem solid #353d4c; background-color: #f3f3f3; line-height: 6rem;}
+            a {display: block;}
+
+            li
+            {
+                & > a 
+                {
+                    @include bg1;
+                    padding-left: 0.5rem; border-bottom: 1px solid #d3d3d3; font-weight: 400; transition: $time2;
+
+                    &::before {position: absolute; left: 0; top: 0; z-index: -1; width: 0; height: 100%; background: url('../img/on.gif') no-repeat right bottom #37a8e9; content: ''; transition: width 0.2s 0.1s;}
+                }
+                
+                &:first-child.active > a {margin-top: 1rem;}                
+                &:last-child
+                {
+                    & > a {border: 0 none;}
+                    &.active {padding-bottom: 1rem;}
+                }
+
+                p {@include hidden; @include fs(15); padding: 0 2rem; background-color: #fff; line-height: 2.5rem; transition: $time2;}
+
+                &.active
+                {
+                    & > a 
+                    {
+                        @include fs(18); 
+                        padding-left: 3.5rem; border: 0 none; color: #fff;
+
+                        &::before {width: calc(100% + 4rem); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);}
+                    }
+                    
+                    p {@include visible; padding: 1.5rem 2rem;}
+                }
+            }
+        }
+
+        .menu 
+        {
+            @include bg1;
+            @include fs(18);
+            padding: 2.5rem 0; color: #fff;
+
+            &::before {@include bg2(type1); height: 1px; background-color: rgba(255, 255, 255, 0.25);}
+
+            a 
+            {
+                position: relative; padding: 0 2rem; margin: 0 3rem; font-weight: 400;
+
+                &.active 
+                {
+                    font-weight: 500; color: #73bfff;
+
+                    &::before {position: absolute; left: 0; top: -0.5rem; width: 1rem; height: 1rem; border-radius: 100%; background-color: #65b9ff; content: '';}
+                }
+            }
+        }
+    }
+
+    & > main 
+    {
+        
+        position: relative; padding-left: 36rem;
+
+        & > .page 
+        {
+            position: relative;
+            
+            & > h1 {@include fs(35); font-weight: 600; color: #1d1c1c;}
+
+            & > .section
+            {
+                & + .section {margin-top: 3rem;}
+                & > h2 {@include fs(25); margin-bottom: 3rem; padding-top: 3rem; font-weight: 600; color: #333b43;}
+
+                & > .group
+                {
+                    & > h3 a 
+                    {
+                        @include fs(20); 
+                        display: block; position: relative; margin-bottom: 1.5rem; cursor: default;
+
+                        small {@include fs(12); margin-left: 0.5rem; font-weight: 300; color: #999;}
+                    }
+
+                    & > .item 
+                    {
+                        @include hidden; margin-top: 0.5rem;
+
+                        & .cont
+                        {
+                            & > hr {height: 1rem;}
+
+                            &  + div 
+                            {
+                                @include hidden;
+
+                                &.active {@include visible; margin-top: 3rem; border: 1px solid #ddd;}
+
+                                & + .btn
+                                {
+                                    @include btn(13.5rem, 40, 0, 1, #3e7fc7, #3e7fc7, $fs2, #fff);
+    
+                                    display: block; min-width: 0; width: 13.5rem; margin: 2.5rem auto;
+    
+                                    &::after {@include icon(type1); margin-left: 1.5rem; content: ''; transition: $time2;}
+    
+                                    
+                                    &.active 
+                                    {
+                                        border-color: #cfcfcf; background-color: #fff; color: #5a5a5a;
+    
+                                        &::after {transform: rotate(180deg);}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.active
+                    {
+                        & > .item {@include visible; margin-bottom: 1.5rem;}
+                    }
+                }
+            }
+        }
+
+        & > .btn_top 
+        {
+            @include fs(14);
+            position: fixed; right: 1rem; bottom: 8rem; z-index: 10; width: 25rem; padding-right: 3rem; color: #000; text-align: right;
+
+            &::before {@include icon(type1); top: 0; right: 0.5rem; content: '';}
+
+            &:hover,
+            &:focus {text-decoration: underline;}
+        }
+    }
+
+    & > footer 
+    {
+        @include bg1;
+        @include fs(15); 
+        margin-top: 10rem; padding: 1.5rem; background-color: #616771; color: rgba(255, 255, 255, 0.5); text-align: center;
+
+        &::before {@include bg2(type1); background-color: #616771;}
+    }
+
+    .syntaxhighlighter
+    {
+        overflow: hidden !important; overflow-x: auto !important; width: calc(100% - 2rem) !important; margin: 1rem !important;
+
+        code {font-size: 1.2rem !important;}
+
+        .toolbar {display: none;}
+        .line.alt2 {background-color: #f8f8f8 !important;}
+        .keyword {font-weight: normal !important;}
+    }
+
+    .markup
+    {
+        .depth1 li 
+        {
+            margin-top: 1rem; padding: 1rem 1.5rem; background-color: #f8f8f8;
+
+            .box {margin: 1rem 0 0.5rem; border-color: #ccc;}
+        }
+
+        .depth2 li,
+        .box 
+        {
+            @include fs(14);
+            display: block; position: relative; padding: 1rem 1.5rem; border: 1px dashed #999; background: none !important; font-weight: 400; color: #000;
+
+            & + * {margin-top: 1rem;}
+
+            &.type1 {border-style: solid;}
+
+            ul {margin-bottom: 0.5rem;}
+        }
+
+        .depth2 .sub,
+        .depth3 li {border: 0 none; background-color: #eaeef3 !important;}
+
+        .depth4 li {border: 1px solid #ccc;}
+        
+        .depth5 
+        {
+            @include list(1rem, 0, 2);
+            margin: 1rem 0 0 !important;
+
+            li {margin-top: 0; border: 1px dashed #999;}
+
+            &.type1 {@include list(1rem, 0, 3);}
+        }
+    }
+
+    .folder
+    {
+        margin-bottom: 2rem; border: 1px solid #ddd; border-top: 0 none; color: #333;
+
+        li::before {@include icon(type1); position: relative; top: -0.1rem; margin-right: 0.5rem; vertical-align: middle;}
+
+        & > ul > li 
+        {
+            padding: 1rem 1.5rem; border-top: 1px solid #ddd; font-weight: 500;
+
+            &::before {content: ''; }
+
+            ul > li 
+            {
+                @include fs(15);
+                margin: 1rem -1.5rem -1rem; padding: 1rem 4rem; border-top: 1px solid #ddd; background-color: #fcfcfc; font-weight: 300;
+
+                $types : (file: '', js: '');
+
+                @each $key, $type in $types
+                {            
+                    &.#{$key}::before {content: $type;}
+                }
+
+                &::before {content: '';}
+                &.css::before {margin-right: 1rem; font-style: italic; font-family: $ff3; font-weight: 800; content: '#';}
+                &.js::before {@include fs(18); top: 0; margin-right: 1rem;}
+
+                ul > li 
+                {
+                    margin-left: -4rem; margin-right: -4rem; padding-left: 6rem; background-color: #f5f5f5;
+
+                    ul > li {margin-left: -6rem; padding-left: 8rem; background-color: #efefef;}
+                }
+            }
+        }
+
+        small {@include fs(14); margin-left: 1rem; padding-left: 1rem; color: #999;}
+    }
+}
+
+@media (max-width: 1280px)
+{
+    #guide
+    {
+        & > header
+        {
+            margin-bottom: 3rem;
+
+            nav {display: none;}
+        }
+
+        & > main 
+        {
+            padding-left: 0;
+
+            & > .page > .section + .section {margin-top: 1rem;}
+        }
+    }
+}
