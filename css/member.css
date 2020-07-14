@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*-------------------------------------------------
+title       : 멤버
+Author      : 플랜아이 광주
+Create date : 2020-06-11
+-------------------------------------------------*/
+.member { width: 87rem; max-width: 100%; margin: 0 auto; padding-top: 6rem; border: 1px solid #ddd; }
+
+.member .box { clear: both; padding: 1.5rem; background-color: #f8f8f8; border-top: 1px solid #ddd; text-align: center; word-break: keep-all; }
+
+.member_title { font-size: 2rem; margin-bottom: 2rem; font-weight: 400; color: #000; }
+
+.member_btn { height: 5.5rem; border: 1px solid #2d6dbb; line-height: 5.3rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.6rem; display: inline-block; min-width: 0; padding: 0 1rem; background-color: #2d6dbb; color: #fff; text-align: center; vertical-align: middle; -webkit-transition: all 0.2s; transition: all 0.2s; display: block; width: 31.5rem; max-width: 100%; margin: 3rem auto 0; }
+
+.member_btn:hover, .member_btn:focus { background-color: transparent; color: #2d6dbb; }
+
+.member_btn.type1 { border-color: #6e7379; background-color: #6e7379; }
+
+.member_btn.type1:hover, .member_btn.type1:focus { color: #6e7379; }
+
+.member_step { display: table; width: calc(100% + 0px); table-layout: fixed; position: relative; z-index: 0; }
+
+.member_step > * { display: table-cell; padding-right: 0px; vertical-align: top; }
+
+.member_step li { font-size: 1.8rem; position: relative; color: #333; text-align: center; }
+
+.member_step li + li::before { position: absolute; right: 50%; top: 3.5rem; z-index: -1; width: 100%; height: 0.3rem; margin-top: -0.15rem; border-top: 0.3rem dotted #b7b7b7; content: ''; }
+
+.member_step li.active small { background-color: #2d6dbb; }
+
+.member_step small { font-size: 1.6rem; display: block; width: 7rem; height: 7rem; margin: 0 auto; border-radius: 100%; border: 1.5rem solid #fff; background-color: #6e7379; background-color: #959fa5; font-weight: 400; color: #fff; line-height: 4rem; }
+
+.member_step strong { display: block; margin-top: -1rem; font-weight: 400; }
+
+.member_step + .login2 { margin-top: 3rem; }
+
+.login1 .title { font-size: 3.5rem; float: left; width: 24.5rem; padding-left: 2rem; color: #0e1262; text-align: center; }
+
+.login1 .form { float: right; position: relative; width: calc(100% - 32.5rem); margin: 0 8rem 4.5rem 0; padding-right: 13rem; }
+
+.login1 .form .form_textbox { height: 4.7rem; padding-left: 2rem; }
+
+.login1 .form .form_textbox + .form_textbox { margin-top: 1rem; }
+
+.login1 .form .btn { font-size: 1.8rem; position: absolute; right: 0; top: 0; width: 12rem; height: 100%; border: 1px solid #2d6dbb; background-color: #2d6dbb; color: #fff; text-align: center; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+.login1 .form .btn:hover, .login1 .form .btn:focus { background-color: #fff; color: #2d6dbb; }
+
+.login1 .list li { position: relative; padding-left: 1.5rem; text-align: left; display: inline-block; margin-right: 4rem; vertical-align: top; }
+
+.login1 .list li::before { position: absolute; left: 0; top: auto; content: ''; }
+
+.login1 .list li::before { top: 1rem; width: 0.5rem; height: 0.5rem; border-radius: 100%; background-color: #0e1262; }
+
+.login1 .list li:last-child { margin-right: 0; }
+
+.login1 .list a { height: 3.2rem; border: 1px solid #ddd; line-height: 3rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.6rem; display: inline-block; min-width: 0; padding: 0 1rem; background-color: #fff; color: #767676; text-align: center; vertical-align: middle; -webkit-transition: all 0.2s; transition: all 0.2s; margin-left: 1rem; }
+
+.login1 .list a:hover, .login1 .list a:focus { background-color: #ddd; color: #fff; }
+
+.login1 .list a::after { display: inline-block; position: relative; top: 1px; font-family: "xeicon"; vertical-align: top; content: ''; }
+
+.login2 { overflow: hidden; word-break: keep-all; }
+
+.login2 .group { float: left; width: calc(50% - 1rem); padding: 6rem; border: 1px solid #ddd; text-align: center; }
+
+.login2 .group.group2 { float: right; }
+
+.login2 i { display: block; width: 7rem; margin: 0 auto 3rem; }
+
+.login2 span { display: block; height: 6.5rem; }
+
+.login2 .title { text-align: center; }
+
+.find .form { width: 32rem; max-width: 100%; margin: 0 auto 7rem; }
+
+.find .form ul { display: inline-block; width: 100%; }
+
+.find .form li { float: left; position: relative; width: calc(50% - 0.5rem); }
+
+.find .form li input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+.find .form li input:checked + label { border-color: #333; color: #000; }
+
+.find .form li input:hover + label, .find .form li input:focus + label { outline: 1px dotted #000; }
+
+.find .form li label { height: 5rem; border: 1px solid #e7e7e7; line-height: 4.8rem; font-size: 1.5rem; display: block; color: #777; text-align: center; }
+
+.find .form li + li { float: right; }
+
+.find .btns { overflow: hidden; margin-top: 1rem; }
+
+.find .txt { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e7e7e7; }
+
+.find .member_btn { float: left; width: calc(50% - 0.5rem); margin-top: 0; }
+
+.find .member_btn + .member_btn { float: right; }
+
+@media (max-width: 768px) { .member { padding-top: 3rem; }
+  .login1 .title { width: 18rem; padding-left: 0; }
+  .login1 .form { width: calc(100% - 22rem); margin: 0 4rem 3rem 0; }
+  .login1 .list li { display: block; width: 40rem; max-width: 100%; margin: 0 auto; }
+  .login1 .list li:last-child { margin: 0.5rem auto 0; }
+  .login2 .group { padding: 3rem; }
+  .login2 .group span { height: 7.5rem; }
+  .find .form { margin-bottom: 3.5rem; } }
+
+@media (max-width: 480px) { .member { padding-top: 2rem; }
+  .login1 .title { float: none; width: 100%; margin-bottom: 1rem; }
+  .login1 .form { float: none; width: calc(100% - 4rem); margin: 0 auto 2rem; padding-right: 11rem; }
+  .login1 .form .btn { width: 10rem; }
+  .login1 .list li { padding-left: 1rem; }
+  .login1 .list a { margin-left: 0.5rem; padding-right: 0.5rem; }
+  .login2 .group { float: none; width: 100%; }
+  .login2 .group.group2 { float: none; margin: 1rem 0 0; }
+  .login2 .group span { height: auto; } }

@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url("../../../css/board.css");
+/*-------------------------------------------------
+title       : 게시판
+Author      : 플랜아이 광주
+Create date : 2020-03-09
+-------------------------------------------------*/
+
+/* FAQ */
+.faq { border-top: 2px solid #555; border-bottom: 1px solid #aaa; }
+.faq .group { border-bottom: 1px solid #ddd; }
+.faq .group.active .label::before { background-color: #116eb4; }
+.faq .group.active .label::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.faq .group.active .item { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; padding-top: 1.5rem; padding-bottom: 1.5rem; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.faq .item { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; position: relative; padding: 0 9rem 0 12rem; border-top: 1px solid #ddd; background-color: #f4f5f6; }
+.faq .item::before { font-size: 2rem; position: absolute; left: 3.5rem; top: 1.5rem; font-family: 'xeicon'; color: #999; content: ''; }
+.faq .item::after { position: absolute; left: 6.5rem; top: 1.5rem; width: 3.5rem; height: 3.5rem; border-radius: 100%; background-color: #fff; font-weight: 600; color: #333; content: 'A'; text-align: center; line-height: 3.5rem; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.faq .label { display: block; position: relative; padding: 2rem 6.5rem; font-weight: 600; color: #333; }
+.faq .label::before { position: absolute; left: 1.5rem; top: 1.5rem; width: 3.5rem; height: 3.5rem; border-radius: 100%; background-color: #333; color: #fff; content: 'Q'; text-align: center; line-height: 3.5rem; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.faq .label::after { font-size: 2.2rem; position: absolute; right: 3rem; bottom: 1.5rem; font-family: 'xeicon'; font-weight: 400; color: #999; content: ''; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+/* 이북형 */
+.board_ebook { display: inline-block; width: calc(100% + 0px); width: calc(100% + 6rem); margin: 0 -3rem; }
+.board_ebook > * { clear: none; float: left; width: calc(50% - 0px); margin-right: 0px; }
+.board_ebook > *:nth-child(n + 3) { margin-top: 0px; }
+.board_ebook > *:nth-child(2n + 1) { clear: both; }
+.board_ebook li { padding: 4rem 3rem; }
+.board_ebook li:nth-child(n + 3) { border-top: 1px solid #ddd; }
+.board_ebook .thumb { overflow: hidden; float: right; width: 16rem; height: 22.5rem; }
+.board_ebook .thumb img { min-height: 100%; }
+.board_ebook .group { float: left; position: relative; width: calc(100% - 20rem); height: 22.5rem; }
+.board_ebook .title { font-size: 2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; margin-bottom: 2.5rem; font-weight: 600; color: #222; }
+.board_ebook .date { display: none; }
+.board_ebook .desc { overflow: hidden; max-height: 7.8rem; color: #666; }
+.board_ebook .btn { position: absolute; left: 0; bottom: 0; width: 100%; }
+.board_ebook .btn a { font-size: 1.5rem; position: relative; width: 13.5rem; min-width: auto; max-width: 48%; height: 4.2rem; padding: 0 1.5rem; text-align: left; line-height: 4rem; }
+.board_ebook .btn a i { position: absolute; top: 50%; left: auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); right: 1.5rem; }
+
+/* PDF형 */
+.board_pdf { display: inline-block; width: calc(100% + 0px); width: calc(100% + 5.5rem); margin: 0 -2.75rem; }
+.board_pdf > * { clear: none; float: left; width: calc(25% - 0px); margin-right: 0px; }
+.board_pdf > *:nth-child(n + 5) { margin-top: 0px; }
+.board_pdf > *:nth-child(2n + 1) { clear: none; }
+.board_pdf > *:nth-child(3n + 1) { clear: none; }
+.board_pdf > *:nth-child(4n + 1) { clear: both; }
+.board_pdf li { padding: 2rem 2.75rem; }
+.board_pdf .thumb { display: block; overflow: hidden; position: relative; height: 0; margin-bottom: 2rem; padding-top: 140%; }
+.board_pdf .thumb img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); min-height: 100%; }
+.board_pdf .title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.8rem; display: block; margin-bottom: 0.5rem; color: #222; }
+.board_pdf .label { font-weight: 400; color: #000; }
+.board_pdf .name { display: none; }
+.board_pdf .btn { display: block; overflow: hidden; margin-top: 2rem; }
+.board_pdf .btn a { font-size: 1.5rem; position: relative; float: left; width: calc(50% - 0.5rem); min-width: auto; height: 4.2rem; padding: 0 1.5rem; text-align: left; line-height: 4rem; }
+.board_pdf .btn a i { position: absolute; top: 50%; left: auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); right: 1.5rem; }
+.board_pdf .btn a + a { float: right; }
+
+/* 달력형 */
+#calendar { position: relative; z-index: 0; }
+#calendar .fc-header-toolbar .fc-center { position: relative; width: 26rem; text-align: center; }
+#calendar .fc-header-toolbar .fc-center h2 { font-size: 3rem; margin: 0; padding: 0; font-weight: 500; color: #333; }
+#calendar .fc-header-toolbar .fc-center button { position: absolute; top: 50%; left: auto; -webkit-transform: translateY(-50%); transform: translateY(-50%); left: 0; margin: 0; padding: 0; border: 0 none; background-color: #fff; font-weight: 400; color: #999; }
+#calendar .fc-header-toolbar .fc-center button.fc-next-button { left: auto; right: 0; }
+#calendar .fc-scroller { height: auto !important; }
+#calendar .fc-view-container { overflow: hidden; margin-top: 4.5rem; border-top: 2px solid #555; border-bottom: 1px solid #aaa; }
+#calendar .fc-view-container .fc-view { width: calc(100% + 2px); margin: -1px; }
+#calendar .fc-view-container td { font-size: 1.4rem; border-color: #ddd; background: none; color: #333; }
+#calendar .fc-view-container .fc-day-header { font-size: 1.6rem; padding: 1.5rem; border-color: #ddd; border-bottom-color: #aaa; font-weight: 500; color: #333; text-transform: uppercase; }
+#calendar .fc-view-container .fc-day-number { display: inline-block; padding: 1.5rem 0 0 1.5rem; color: inherit; }
+#calendar .fc-view-container .fc-sat { color: #116eb4; }
+#calendar .fc-view-container .fc-sun { color: #cb152b; }
+#calendar .fc-view-container .fc-day-grid-event { font-size: 1.5rem; height: 2.5rem; margin: 0; padding: 0 0.5rem; border-radius: 0; border: 0 none; line-height: 2.5rem; }
+#calendar .fc-view-container .fc-day-grid-event .fc-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+#calendar .fc-view-container .fc-today { position: relative; z-index: 1; border-color: #555; }
+#calendar .fc-view-container .fc-today.fc-widget-content td { border: 0 none; }
+#calendar .fc-view-container .fc-today.fc-widget-content::before { position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #555; content: ''; }
+#calendar .fc-view-container .fc-bgevent-skeleton td { border: 0 none; }
+#calendar .fc-view-container .fc-other-month { background-color: #f6f7fa; color: #aaa; }
+#calendar .fc-view-container .fc-row .fc-content-skeleton { padding-bottom: 1.5rem; }
+#calendar .fc-view-container .fc-row .fc-content-skeleton td { border-color: transparent; }
+#calendar .fc-view-container .fc-row .fc-content-skeleton td.fc-other-month { border-color: #ddd; }
+#calendar .fc-view-container .fc-row .fc-content-skeleton .fc-event-container { padding: 0.25rem 0; border: 0 none !important; }
+
+/* 다른 달력형 */
+div.CalendarList div.Bhead > ul { border-top: 2px solid #555 !important; border-bottom: 1px solid #aaa !important; background: none !important; }
+div.CalendarList div.Bhead > ul > li + li { border-left: 1px solid #ddd; }
+div.CalendarList div.Bhead > ul > li { font-size: 1.8rem !important; font-weight: 500; color: #000 !important; text-transform: uppercase; }
+div.CalendarList div.Bbody > ul > li { border-bottom: 1px solid #ddd !important; } 
+div.CalendarList div.Bbody > ul > li > span + span { border-left: 1px solid #ddd; }
+div.CalendarList div.Bbody > ul > li:last-child { border-bottom-color: #aaa !important; }
+div.CalendarList div.Bbody > ul > li > span { height: 12rem !important; }
+div.CalendarList div.Bbody > ul > li > span > a { padding: 1rem; text-align: left; line-height: inherit !important; }
+div.CalendarList div.Bbody > ul > li > span > a:hover,
+div.CalendarList div.Bbody > ul > li > span > a:focus {background-color: #f8f8f8;}
+div.CalendarList div.Bbody > ul > li > span > a::before { display: none !important; } 
+div.CalendarList div.Bbody > ul > li > span > a.current::after { position: absolute; left: 0; top: 0; width: 100% !important; height: 100% !important; margin: 0 !important; border-radius: 0 !important; border: 1px solid #000; background: none !important; } 
+div.CalendarList div.Bbody > ul > li > span:first-child a,
+div.CalendarList div > ul > li.sun { color: #cb152b !important; }
+div.CalendarList div > ul > li.sat,
+div.CalendarList div.Bbody > ul > li > span:last-child a { color: #116eb4 !important; }
+div.CalendarList div.Bbody > ul > li > span > span.schedule { z-index: 1; }
+div.ScheduleList#listView { margin-top: -1px; border-bottom: 1px solid #999; background-color: #fff; }
+div.ScheduleList#listView > div { margin-top: 0; border: 0 none; border-top: 1px solid #ddd; }
+div.ScheduleList#listView > div:last-child { border-bottom: 0 none; }
+div.ScheduleList#listView > div > a  { min-height: 0; }
+div.ScheduleList#listView > div > a span.day { width: 10rem; border: 0 none; line-height: 30px; }
+div.ScheduleList#listView > div > a span.day > span { width: calc(100% - 1rem); padding: 0; font-size: 1.4rem !important; font-weight: 400; color: #fff !important; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2); }
+div.ScheduleList#listView > div > a span.group { width: calc(100% - 10rem - 15px); padding-top: 0; }
+div.ScheduleList#listView > div > a span.group::after { display: none; }
+div.ScheduleList#listView > div > a span.title { padding-top: 0; }
+div.ScheduleList#listView > div > a:hover span.title,
+div.ScheduleList#listView > div > a:focus span.title { color: inherit; text-decoration: underline; }
+div.ScheduleList#listView > span.nodata { margin-top: -1px; border: 0 none; border-top: 1px solid #ddd; }
+#srhForm + div.DateArea div.btn-area a { text-align: center; text-indent: 0.5rem; line-height: 35px; }
+#srhForm + div.DateArea div.btn-area a::before { display: inline-block; position: static; border-color: #ccc; vertical-align: middle; transition: all 0.2s; }
+#srhForm + div.DateArea div.btn-area a.next_month { text-indent: -0.5rem; }
+#srhForm + div.DateArea div.btn-area a:hover,
+#srhForm + div.DateArea div.btn-area a:focus { background: none; border-color: #000; }
+#srhForm + div.DateArea div.btn-area a:hover::before,
+#srhForm + div.DateArea div.btn-area a:focus::before { border-color: #000; }
+#srhForm + div.DateArea div.btn-area a.All-schedule { line-height: 38px; }
+#srhForm + div.DateArea div.btn-area a.All-schedule:hover,
+#srhForm + div.DateArea div.btn-area a.All-schedule:focus { border-color: #e36f51; background-color: #e36f51; }
+
+@media (max-width: 1024px) 
+{ 
+    /* 이북형 */
+    .board_ebook { width: calc(100% + 4rem); margin: 0 -2rem; }
+    .board_ebook li { padding: 3rem 2rem; }
+    .board_ebook .group { width: calc(100% - 18rem); }
+    .board_ebook .btn a { padding: 0 1rem; }
+
+    /* PDF형 */
+    .board_pdf { width: calc(100% + 2rem) !important; margin: 0 -1rem; }
+    .board_pdf li { padding: 2rem 1rem; }
+    .board_pdf .btn a { padding: 0 1rem; }
+    .board_pdf .btn a i { right: 1rem; } 
+}
+
+@media (max-width: 768px) 
+{ 
+    /* 이북형 */
+    .board_ebook { display: block; width: 100%; margin: 0; }
+    .board_ebook > * { display: block; clear: none; float: none; width: 100%; margin-right: 0; }
+    .board_ebook > * + * { margin-top: 0; }
+    .board_ebook li { overflow: hidden; padding: 1.5rem; }
+    .board_ebook li:nth-child(n + 2) { border-top: 1px solid #ddd; }
+    .board_ebook .group { height: 21.5rem; padding: 1rem 0 0; }
+
+    /* PDF형 */
+    .board_pdf { display: inline-block; width: calc(100% + 0px); }
+    .board_pdf > * { clear: none; float: left; width: calc(33.33333% - 0px); margin-right: 0px; }
+    .board_pdf > *:nth-child(n + 4) { margin-top: 0px; }
+    .board_pdf > *:nth-child(2n + 1) { clear: none; }
+    .board_pdf > *:nth-child(3n + 1) { clear: both; } 
+}
+
+@media (max-width: 540px) 
+{ 
+    /* FAQ */
+    .faq .label { padding: 1.5rem 4rem 1.5rem 6.5rem; }
+    .faq .label::before { top: 1rem; }
+    .faq .label::after { right: 1rem; bottom: 1rem; }
+    .faq .item { padding: 0 1rem 0 6.5rem; }
+    .faq .item::before { display: none; }
+    .faq .item::after { left: 1.5rem; }
+
+    /* PDF형 */
+    .board_pdf { display: inline-block; width: calc(100% + 0px); }
+    .board_pdf > * { clear: none; float: left; width: calc(50% - 0px); margin-right: 0px; }
+    .board_pdf > *:nth-child(n + 3) { margin-top: 0px; }
+    .board_pdf > *:nth-child(2n + 1) { clear: both; }
+
+    /* 달력형 */
+    #calendar .fc-view-container .fc-day-header { padding: 0.5rem 0; }
+    #calendar .fc-view-container .fc-day-number { font-size: 1.2rem; padding: 0.5rem 0 0 0.5rem; }
+    #calendar .fc-view-container .fc-day-grid-event .fc-title { font-size: 1.4rem; }
+    #calendar .fc-view-container .fc-row .fc-content-skeleton { padding-bottom: 0; }
+    #calendar .fc-view-container .fc-row .fc-content-skeleton .fc-event-container { padding: 0.15rem 0 0; }
+    #calendar .fc-view-container .fc-row .fc-content-skeleton tr:last-child td { height: 3rem; }
+    #calendar .fc-view-container .fc-row .fc-content-skeleton tr:last-child td.fc-event-container { height: auto; } 
+}
+
+@media (max-width: 360px) 
+{ 
+    /* 이북형 */
+    .board_ebook li { padding: 1.5rem 0; }
+    .board_ebook .thumb { width: 14rem; height: 20rem; }
+    .board_ebook .group { width: calc(100% - 16rem); height: 19rem; }
+    .board_ebook .desc { max-height: 5.1rem; }
+
+    /* PDF형 */
+    .board_pdf .btn a { display: block; float: none; width: 100%; }
+    .board_pdf .btn a + a { float: none; margin-top: 0.5rem; } 
+}
