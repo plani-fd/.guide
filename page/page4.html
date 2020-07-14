@@ -1,0 +1,1063 @@
+<h1>게시판</h1>            
+<p><strong style="color: #c00;">*</strong> 달력 게시판은 스크립트 사용으로 스킨 수정이 어려워 가이드에 작성되지 않음</p><br>
+
+<section class="section">
+    <h2>자주 쓰는 요소</h2>
+
+    <article class="group active">
+        <h3><a href="">목록 상단</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_info">
+                    <form name="srhForm" id="srhForm" method="post" action="/board.es?mid=a10201000000&amp;bid=0001">
+                        <fieldset>
+                            <legend class="blind">일반게시판(BOD) 검색</legend>
+                            <div class="form">                                        
+                            <p class="item">
+                                <span class="form_select">
+                                    <select name="cg_code" title="게시물 분류를 선택하세요.">
+                                        <option value="">분류 전체</option>
+                                    </select>
+                                </span>
+                            </p>
+                            
+                            <p class="item">
+                                <span class="form_select">
+                                    <select name="keyField" id="select" title="검색어 분류를 선택하세요.">
+                                        <option value="" selected="selected">전체</option>
+                                    </select>
+                                </span>
+                            </p>
+
+                            <span class="item type1"><input type="text" name="keyWord" class="form_textbox" placeholder="검색어를 입력하세요" title="검색어를 입력하세요" value=""></span>
+                            <span class="item type1 btn"><button type="submit" class="Btn-Gray Xs">검색</button></span>
+                            </div>				
+                        </fieldset>
+                    </form>
+
+                    <p class="page">
+                        <span class="total">전체 <b>8,897건</b> </span> <span class="current">페이지 <strong>1</strong>/<b>890</b></span>                                    
+                        <a class="icon_rss" href="/rss/board.es?mid=a10201000000&amp;bid=0001" target="_blank" title="새창"><span class="IR">RSS</span></a>                                    
+                    </p>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">이전글 다음글</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="prevnext">
+                    <li class="prev"><span>이전글</span><a href="">강우시 억지말뚝으로 보강된 사면의 거동 및 안정성 변화</a></li>                                
+                    <li class="next"><span>다음글</span><a href="">일반게시판 등록 테스트 28</a></li>                                
+                </ul>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">페이징 <small>/ease_src/board/page_skip.jsp, /ease_src/gallery/page_skip.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_pager">
+                    <a href="" class="arr first">처음</a>
+                    <a href="" class="arr prev">이전</a>                                
+                    <span class="group">
+                        <a href="" class="active" title="현재 페이지"><strong>1</strong></a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">6</a>
+                        <a href="">7</a>
+                        <a href="">8</a>
+                        <a href="">9</a>
+                        <a href="">10</a>
+                    </span>                                
+                    <a href="" class="arr next">다음</a>
+                    <a href="" class="arr last">마지막</a>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">게시판용 버튼 <small>/ease_src/board/board_btn_**.jsp, /ease_src/gallery/board_btn_**.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_btns">
+                    <p class="txt">* 접수이후로는 수정/삭제가 불가능합니다.</p>
+
+                    <button type="button" class="btn type2">저장</button>                            
+                    <button type="button" class="btn type1">목록</button>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">댓글 <small>/ease_src/board/comment_list.jsp, /ease_src/gallery/comment_list.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <article class="comment">
+                    <div class="form">
+                        <form name="cmtForm" method="post" action="">
+                        <fieldset>
+                            <legend class="blind">등록</legend>
+                            <div class="item">
+                                <span class="length"><span id="opinionLength">0</span> / 200</span>
+                                <textarea title="댓글 내용" name="c_comment" rows="4" cols="76" placeholder="댓글을 남겨주세요."></textarea>                                        
+                                <button type="button" class="btn">등록</button>                                            
+                            </div>
+                        </fieldset>
+                        </form>
+                    </div>
+
+                    <h2 class="title">총 <span>3건</span>의 댓글</h2>
+                        
+                    <div class="list" id="commentListFirst">
+                        <ul>                        
+                            <li id="cmt2">
+                                <span class="name">익명</span>					
+                                <p id="comment_spread_upt_0" class="txt">댓글등록ㅇㅇㅇㅇㅇ</p>					
+                                <span class="date">2020/03/10 10:51</span>
+                                <br>
+                                <p class="btn">                                            
+                                    <a href="">수정</a>
+                                    <a href="">삭제</a>                                            
+                                </p>
+            
+                                <div class="form" id="spread_upt_0_box" style="display:none;">
+                                    <form name="cmtUptForm0" method="post" action="">                                                
+                                        <textarea name="c_comment" title="수정 내용">댓글등록ㅇㅇㅇㅇㅇ</textarea>
+                                        <button type="button">저장</button>                                                
+                                    </form>
+                                </div>
+                                
+                                <div class="form" id="spread_0_box" style="display:none;">
+                                    <form name="cmtReForm0" method="post" action="">                                                    
+                                        <textarea name="c_comment" placeholder="답변을 남겨주세요." title="댓글의 답변 내용"></textarea>
+                                        <button type="button">등록</button>
+                                    </form>
+                                </div>                                            
+                            </li>                                
+                            <li id="cmt4" class="re">
+                                <span class="name">익명</span>					
+                                <p id="comment_spread_upt_1" class="txt">답변이고여</p>					
+                                <span class="date">2020/03/10 10:59</span>
+                                <br>
+                                <p class="btn">                                            
+                                    <a href="">수정</a>
+                                    <a href="">삭제</a>                                            
+                                </p>
+            
+                                <div class="form" id="spread_upt_1_box" style="display:none;">
+                                    <form name="cmtUptForm1" method="post" action="">                                                    
+                                        <textarea name="c_comment" title="수정 내용">답변이고여</textarea>
+                                        <button type="button" onclick="cmtUpt('0001', '30', '4', document.cmtUptForm1); return false;">저장</button>
+                                    </form>
+                                </div>
+                                
+                            </li>                                
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+</section>
+
+<section class="section">
+    <h2>목록</h2>
+
+    <article class="group active">
+        <h3><a href="">일반 <small>/ease_src/board/board_list***.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_list">
+                    <table class="tstyle_list">
+                        <caption>일반게시판(BOD) 목록 - 번호, 분류, 제목, 등록일, 첨부파일, 조회수, 처리상태, 링크</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">첨부파일</th>
+                                <th scope="col">조회수</th>
+                                <th scope="col">처리상태</th>
+                                <th scope="col">링크</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="m_hidden" aria-label="번호"><i class="icon_notice">공지</i></td>
+                                <td aria-label="분류">분류2</td>
+                                <td class="txt_left" aria-label="제목"><strong><a href="">일반게시판 등록 테스트 30 <span class="comment" aria-label="댓글"> (3)</span></a></strong></td>
+                                <td aria-label="등록일">2020/03/02</td>
+                                <td aria-label="첨부파일"><img src="/upload/skin/board/basic/attach.png" alt="3개의 첨부파일"></td>
+                                </td><td class="m_hidden" aria-label="조회수">226</td>
+                                <td aria-label="처리상태"><span class="icon" data-label="진행중">진행중</span></td>
+                                <td aria-label="링크">
+                                    <a href="https://www.gwangju.go.kr/" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="m_hidden" aria-label="번호">8897</td>
+                                <td aria-label="분류">분류1</td>
+                                <td class="txt_left" aria-label="제목"> <a href="" title="test2"> <i class="xi-new"><span class="sr_only">새글</span></i> test2</a></td>
+                                <td aria-label="등록일">2020/04/07</td>
+                                <td aria-label="첨부파일"><a href=""><img src="/upload/skin/board/basic/pdf.png" onerror="this.src='/upload/skin/board/basic/file.png'" alt="테스트test1234.pdf"></a></td>
+                                <td class="m_hidden" aria-label="조회수">8</td>
+                                <td aria-label="처리상태"><span class="icon" data-label="답변완료">답변완료</span></td>
+                                <td aria-label="링크">
+                                    <a href="https://www.gwangju.go.kr/" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td class="m_hidden" aria-label="번호">8896</td>
+                                <td aria-label="분류"></td>
+                                <td class="txt_left" aria-label="제목"><a href="" title="test1"> <i class="xi-new"><span class="sr_only">새글</span></i> test1</a></td>
+                                <td aria-label="등록일">2020/04/07</td>
+                                <td aria-label="첨부파일"><a href=""><img src="/upload/skin/board/basic/hwp.png" onerror="this.src='/upload/skin/board/basic/file.png'" alt="코로나바이러스감염증-19_국내_발생_현황(0시_기준).hwp"></a></td>
+                                <td class="m_hidden" aria-label="조회수">2</td>
+                                <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                <td aria-label="링크">
+                                    <a href="https://www.gwangju.go.kr/" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>                            
+                            <tr>
+                                <td class="m_hidden" aria-label="번호">8895</td>
+                                <td aria-label="분류"></td>
+                                <td class="txt_left" aria-label="제목"><a href="" title="111111111111">  111111111111</a></td>
+                                <td aria-label="등록일">2020/03/06</td>
+                                <td aria-label="첨부파일"></td>
+                                <td class="m_hidden" aria-label="조회수">0</td>
+                                <td aria-label="처리상태"><span class="icon" data-label="접수">접수</span></td>
+                                <td aria-label="링크">
+                                    <a href="https://www.gwangju.go.kr/" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="m_hidden" aria-label="번호">8892</td>
+                                <td aria-label="분류"></td>
+                                <td class="txt_left" aria-label="제목"><a href="" title="일반게시판 등록 테스트 28">  일반게시판 등록 테스트 28</a></td>
+                                <td aria-label="등록일">2020/03/02</td>
+                                <td aria-label="첨부파일"><a href=""><img src="/upload/skin/board/basic/zip.png" onerror="this.src='/upload/skin/board/basic/file.png'" alt="테스트test1234.zip"></a></td>
+                                <td class="m_hidden" aria-label="조회수">10</td>
+                                <td aria-label="처리상태"><span class="icon" data-label="접수">접수</span></td>
+                                <td aria-label="링크">
+                                    <a href="https://www.gwangju.go.kr/" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">FAQ <small>/ease_src/board/board_listFAQ.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="faq">
+                    <li class="group active">
+                        <a href="" class="label"><span>FAQ게시판 등록 테스트 30 - 첨부파일 추가</span></a>
+                        <div class="item">
+                            신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해
+                            진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.
+                            ○ 일  시 : 2020. 2. 24(월) 09:00 ~
+                            ○ 대  상 : 보건소 진료업무 및 모든 민원업무
+                            ○ 내  용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를 위한 진료 및 민원업무 잠정중단
+                            ○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)
+                            채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, 
+                            운전면허 신체검사서 발급기관은 붙임파일을 참고하시기 바랍니다.
+                        </div>
+                    </li>                        
+                    <li class="group">
+                        <a href="" class="label"><span>FAQ게시판 등록 테스트 28</span></a>
+                        <div class="item">
+                            신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해
+                            진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.
+                            ○ 일  시 : 2020. 2. 24(월) 09:00 ~
+                            ○ 대  상 : 보건소 진료업무 및 모든 민원업무
+                            ○ 내  용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를 위한 진료 및 민원업무 잠정중단
+                            ○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)
+                            채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, 
+                            운전면허 신체검사서 발급기관은 붙임파일을 참고하시기 바랍니다.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">E-book형 <small>/ease_src/board/board_listEBK.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_list">
+                    <ul class="board_ebook">                                    
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/error/img/noimage-ebook.jpg" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">test</strong>
+                                    <p class="desc">IMG_FILE</p>
+                                    <span class="date"><strong class="label">작성일 </strong>2020 - 11</span>
+                                </div>
+                                
+                                <p class="btn">
+                                    <span><a href="" class="btn_line">다운로드 <i class="xi-download" aria-hidden="true"></i></a></span>
+                                    <span><a href="" class="btn_line">미리보기 <i class="xi-search" aria-hidden="true"></i></a></span>
+                                </p>
+                            </div>
+                        </li>                                    
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/boardImgView.es?bid=0004&amp;list_no=120" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">이북형 게시판 등록 테스트 30</strong>
+                                    <p class="desc">
+                                        신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.
+                                        ○ 일    시 : 2020. 2. 24(월) 09:00 ~
+                                        ○ 대    상 : 보건소 진료업무 및 모든 민원업무
+                                        ○ 내    용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를              위한 진료 및 민원업무 잠정중단
+                                        ○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, 운전면허 신체검사서 발..
+                                    </p>
+                                    <span class="date"><strong class="label">작성일 </strong>2019 - 01</span>
+                                </div>
+                                
+                                <p class="btn">
+                                    <span><a href="" class="btn_line">다운로드 <i class="xi-download" aria-hidden="true"></i></a></span>
+                                    <span><a href="" class="btn_line">미리보기 <i class="xi-search" aria-hidden="true"></i></a></span>
+                                </p>
+                            </div>
+                        </li>                                   
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/boardImgView.es?bid=0004&amp;list_no=120" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">이북형 게시판 등록 테스트 30</strong>
+                                    <p class="desc">
+                                        신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.
+                                        ○ 일    시 : 2020. 2. 24(월) 09:00 ~
+                                        ○ 대    상 : 보건소 진료업무 및 모든 민원업무
+                                        ○ 내    용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를              위한 진료 및 민원업무 잠정중단
+                                        ○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, 운전면허 신체검사서 발..
+                                    </p>
+                                    <span class="date"><strong class="label">작성일 </strong>2019 - 01</span>
+                                </div>
+                                
+                                <p class="btn">
+                                    <span><a href="" class="btn_line">다운로드 <i class="xi-download" aria-hidden="true"></i></a></span>
+                                    <span><a href="" class="btn_line">미리보기 <i class="xi-search" aria-hidden="true"></i></a></span>
+                                </p>
+                            </div>
+                        </li>                                 
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/boardImgView.es?bid=0004&amp;list_no=120" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">이북형 게시판 등록 테스트 30</strong>
+                                    <p class="desc">
+                                        신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.
+                                        ○ 일    시 : 2020. 2. 24(월) 09:00 ~
+                                        ○ 대    상 : 보건소 진료업무 및 모든 민원업무
+                                        ○ 내    용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를              위한 진료 및 민원업무 잠정중단
+                                        ○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, 운전면허 신체검사서 발..
+                                    </p>
+                                    <span class="date"><strong class="label">작성일 </strong>2019 - 01</span>
+                                </div>
+                                
+                                <p class="btn">
+                                    <span><a href="" class="btn_line">다운로드 <i class="xi-download" aria-hidden="true"></i></a></span>
+                                    <span><a href="" class="btn_line">미리보기 <i class="xi-search" aria-hidden="true"></i></a></span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">PDF형 <small>/ease_src/board/board_listPDF.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_list">
+                    <ul class="board_pdf">
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/error/img/noimage-ebook.jpg" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">test</strong>
+                                    <span class="name"><strong class="label">작성자</strong>  TEST</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/11</span>
+                                </div>
+                                    
+                                <span class="btn">
+                                    <a href="" class="btn_line">다운로드<i class="xi-download" aria-hidden="true"></i></a>
+                                    <a href="" class="btn_line">미리보기<i class="xi-search" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                        </li>                                
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/boardImgView.es?bid=0007&amp;list_no=163" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">PDF 게시판(PDF) 등록 테스트</strong>
+                                    <span class="name"><strong class="label">작성자</strong>  최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/05</span>
+                                </div>
+                                    
+                                <span class="btn">
+                                    <a href="" class="btn_line">다운로드<i class="xi-download" aria-hidden="true"></i></a>
+                                    <a href="" class="btn_line">미리보기<i class="xi-search" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                        </li>                                
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/boardImgView.es?bid=0007&amp;list_no=162" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">PDF 게시판(PDF) 등록 테스트</strong>
+                                    <span class="name"><strong class="label">작성자</strong>  최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/05</span>
+                                </div>
+                                    
+                                <span class="btn">
+                                    <a href="" class="btn_line">다운로드<i class="xi-download" aria-hidden="true"></i></a>
+                                    <a href="" class="btn_line">미리보기<i class="xi-search" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="thumb" aria-hidden="true">
+                                <img src="/error/img/noimage-ebook.jpg" onerror="this.src='/error/img/noimage-ebook.jpg'" alt="">
+                            </i>
+                            <div class="group">
+                                <div class="item">
+                                    <strong class="title">test</strong>
+                                    <span class="name"><strong class="label">작성자</strong>  TEST</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/11</span>
+                                </div>
+                                    
+                                <span class="btn">
+                                    <a href="" class="btn_line">다운로드<i class="xi-download" aria-hidden="true"></i></a>
+                                    <a href="" class="btn_line">미리보기<i class="xi-search" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">동영상, 앨범형, 유투브 <small>/ease_src/gallery/gallery_listSK1.jsp, gallery_listSK2.jsp, gallery_listYOU.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_list">
+                    <!-- gallery_list 한 줄에 3개, type1 추가 시 한 줄에 4개 노출 -->
+                    <ul class="gallery_list type1">			
+                        <li>
+                            <a href="">                                            
+                                <i class="thumb" aria-hidden="true"><img src="/galleryThumbView.es?bid=0001&amp;list_no=60" alt="" onerror="this.src='/error/img/noimage.jpg'"></i>
+                                <p class="desc">
+                                    <strong class="title">동영상 게시판 등록 테스트30</strong>
+                                    <br>
+                                    <span class="name"><strong class="label">작성자</strong> 최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/02</span>
+                                    <span class="hit"><strong class="label">조회수</strong> 21</span>
+                                </p>
+                            </a>
+                        </li>                                    
+                        <li>
+                            <a href="">                                            
+                                <i class="thumb" aria-hidden="true"><img src="/galleryThumbView.es?bid=0001&amp;list_no=59" alt="" onerror="this.src='/error/img/noimage.jpg'"></i>
+                                <p class="desc">
+                                    <strong class="title">동영상 게시판 등록 테스트29</strong>
+                                    <br>
+                                    <span class="name"><strong class="label">작성자</strong> 최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/02</span>
+                                    <span class="hit"><strong class="label">조회수</strong> 6</span>
+                                </p>
+                            </a>
+                        </li>                                    
+                        <li>
+                            <a href="">                                            
+                                <i class="thumb" aria-hidden="true"><img src="/galleryThumbView.es?bid=0001&amp;list_no=58" alt="" onerror="this.src='/error/img/noimage.jpg'"></i>
+                                <p class="desc">
+                                    <strong class="title">동영상 게시판 등록 테스트28</strong>
+                                    <br>
+                                    <span class="name"><strong class="label">작성자</strong> 최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/02</span>
+                                    <span class="hit"><strong class="label">조회수</strong> 4</span>
+                                </p>
+                            </a>
+                        </li>                                    
+                        <li>
+                            <a href="">                                            
+                                <i class="thumb" aria-hidden="true"><img src="/galleryThumbView.es?bid=0001&amp;list_no=57" alt="" onerror="this.src='/error/img/noimage.jpg'"></i>
+                                <p class="desc">
+                                    <strong class="title">동영상 게시판 등록 테스트27</strong>
+                                    <br>
+                                    <span class="name"><strong class="label">작성자</strong> 최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/02</span>
+                                    <span class="hit"><strong class="label">조회수</strong> 6</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">웹진형 <small>/ease_src/gallery/gallery_listSK3.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_list">
+                    <ul class="blog_list">		
+                        <li>
+                            <a href="">
+                                <i class="thumb" aria-hidden="true">                                                
+                                    <img src="/galleryThumbView.es?bid=0003&amp;list_no=117" alt="" onerror="this.src='/error/img/noimage.jpg'">
+                                </i>
+                                <div class="desc">						
+                                    <strong class="title"> 웹진형 게시판 등록 테스트 27</strong>
+                                    <div class="txt">
+                                        <p>신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해</p>
+                                        <p>진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.</p>
+                                    </div>
+                                    <span class="name"><strong class="label">작성자</strong> 최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/02</span>
+                                    <span class="hit"><strong class="label">조회수</strong> 19</span>
+                                </div>
+                            </a>
+                        </li>                                 
+                        <li>
+                            <a href="">
+                                <i class="thumb" aria-hidden="true">                                                
+                                    <img src="/galleryThumbView.es?bid=0003&amp;list_no=111" alt="" onerror="this.src='/error/img/noimage.jpg'">
+                                </i>
+                                <div class="desc">						
+                                    <strong class="title"> 웹진형 게시판 등록 테스트 21</strong>
+                                    <div class="txt">
+                                        <p>신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해</p>
+                                        <p>진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.</p>
+                                    </div>
+                                    <span class="name"><strong class="label">작성자</strong> 최고관리자</span>
+                                    <span class="date"><strong class="label">작성일</strong> 2020/03/02</span>
+                                    <span class="hit"><strong class="label">조회수</strong> 5</span>
+                                </div>
+                            </a>
+                        </li>                                    
+                    </ul>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+</section>
+
+<section class="section">
+    <h2>내용/작성</h2>
+
+    <article class="group active">
+        <h3><a href="">내용 <small>/ease_src/board/board_view***.jsp, /ease_src/gallery/gallery_view***.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <article class="board_view">
+                    <h2 class="title">
+                        <span class="category cateC01">휴무일</span>
+                        일반게시판 등록 테스트 30
+                    </h2>
+                    <ul class="info">
+                        <li class="date"><strong>작성일</strong><span>2020/03/02 16:26</span></li>
+                        <li class="cate"><strong>분류</strong><span>분류2</span></li>
+                        <li class="hit"><strong>조회수</strong><span>235</span></li>
+                        <li class="period"><strong>공지기간</strong><span>2000/01/01 ~ 3000/12/31</span></li>
+                    </ul>
+                    <div class="contents">
+                        <!-- 이미지가 슬라이드로 나올 때 -->
+                        <div class="gallery_view">
+                            <div class="thumb">
+                                <ul>
+                                    <li data-index="0" class="active"><a href=""><img src="/error/img/noimage.jpg" alt="정렬 테스트 이미지3개 사진1" onerror="this.src='/error/img/noimage.jpg'" /></a></li>
+                                    <li data-index="1"><a href=""><img src="/error/img/noimage.jpg" alt="정렬 테스트 이미지3개 사진2" onerror="this.src='/error/img/noimage.jpg'" /></a></li>
+                                    <li data-index="2"><a href=""><img src="/error/img/noimage.jpg" alt="정렬 테스트 이미지3개 사진3" onerror="this.src='/error/img/noimage.jpg'" /></a></li>
+                                </ul>
+                            </div>
+                                
+                            <div class="list">
+                                <ul>
+                                    <li><img src="/error/img/noimage.jpg" alt="정렬 테스트 이미지3개 사진1" onerror="this.src='/error/img/noimage.jpg'" /></li>
+                                    <li><img src="/error/img/noimage.jpg" alt="정렬 테스트 이미지3개 사진2" onerror="this.src='/error/img/noimage.jpg'" /></li>
+                                    <li><img src="/error/img/noimage.jpg" alt="정렬 테스트 이미지3개 사진3" onerror="this.src='/error/img/noimage.jpg'" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                            
+                        <script>
+                            $(function()
+                            {
+                                $gallery1 = $('.gallery_view .list ul'); 
+                                $gallery2 = $('.gallery_view .thumb ul'); 
+                                $gallery1.bxSlider
+                                ({
+                                    mode			: 'fade',
+                                    pager       	: false,
+                                    infiniteLoop	: false,
+                                    controls        : false
+                                });
+                                $gallery2.bxSlider
+                                ({
+                                    pager       	: false,
+                                    maxSlides   	: 7,
+                                    minSlides   	: 2,
+                                    moveSlides  	: 1,
+                                    slideWidth  	: 142,
+                                    onSlideBefore	: function($slideElement, oldIndex, newIndex)
+                                    {
+                                        $gallery2.find('li').removeClass('active');
+                                        $gallery2.find('li[data-index="' + newIndex + '"]').addClass('active');			        	
+                                        $gallery1.goToSlide(newIndex);			        	
+                                    }
+                                });
+                                $('.gallery_view .thumb li').find('a').on('click', function()
+                                {
+                                    inx = $(this).parent('li').attr('data-index');
+                                    $(this).parent('li').addClass('active');
+                                    $(this).parent('li').siblings('li').removeClass('active');
+                                    $gallery1.goToSlide(inx);
+                                    return false;
+                                });
+                            });
+                        </script>
+                        <!-- //이미지가 슬라이드로 나올 때 -->
+
+                        <p>신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해</p>
+                        <p>진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.</p>
+                        <p><br></p>
+                        
+                        <p>
+                            ○ 일&nbsp;&nbsp;&nbsp; 시 : 2020. 2. 24(월) 09:00 ~<br>
+                            ○ 대&nbsp;&nbsp;&nbsp; 상 : 보건소 진료업무 및 모든 민원업무<br>
+                            ○ 내&nbsp;&nbsp;&nbsp; 용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 위한 진료 및 민원업무 잠정중단<br>
+                        </p>
+                        
+                        <p>○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)</p>
+                        <p><br></p>
+                        <p>채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, </p>
+                        <p>운전면허 신체검사서 발급기관은 붙임파일을 참고하시기 바랍니다.</p>
+
+                        <p class="img"><img src="/boardDownload.es?bid=0001&amp;list_no=30&amp;seq=3" alt=""></p>
+
+                        <br><br>
+                        <!-- 동영상 내용 -->
+                        <div class="video">
+                            <div class="player">
+                                <video id="video2" width="100%" controls="controls">
+                                    <source src="/galleryImgView.es?bid=0001&amp;list_no=60&amp;seq=2" type="video/mp4">                                                    
+                                </video>
+                            </div>
+
+                            <!-- 유투브 일 때 -->
+                            <div class="youtube"><iframe title="test" width="100%" height="100%" src="https://www.youtube.com/embed/a9JoHtHly-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+                            <!-- //유투브 일 때 -->
+                            
+                            <div class="txt_center">
+                                <a href="/galleryImgView.es?bid=0001&amp;list_no=60&amp;seq=1" target="_blank" title="이미지 원본크기 보기(새창)">
+                                    <img id="viewImg1" src="/galleryImgView.es?bid=0001&amp;list_no=60&amp;seq=1" alt="동영상 게시판 등록 테스트30 사진1" onerror="this.src='/error/img/noimage.jpg'">
+                                </a>
+                            </div>
+                            
+                            <div class="desc" tabindex="0">                                    
+                                <p>신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해</p>
+                                <p>진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.</p>
+                                <p><br></p>
+                                
+                                <p>
+                                    ○ 일&nbsp;&nbsp;&nbsp; 시 : 2020. 2. 24(월) 09:00 ~<br>
+                                    ○ 대&nbsp;&nbsp;&nbsp; 상 : 보건소 진료업무 및 모든 민원업무<br>
+                                    ○ 내&nbsp;&nbsp;&nbsp; 용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를 <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 위한 진료 및 민원업무 잠정중단<br>
+                                </p>
+                                
+                                <p>○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)</p>
+                                <p><br></p>
+                                <p>채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, </p>
+                                <p>운전면허 신체검사서 발급기관은 붙임파일을 참고하시기 바랍니다.</p>
+                            </div>
+                        </div>
+                        <!-- //동영상 내용 -->
+                    </div>
+
+                    <div class="file">
+                        <strong class="title">첨부파일</strong>
+                        <ul class="list">                                        
+                            <li>
+                                <img src="/upload/skin/board/basic/pdf.png" onerror="this.src='/upload/skin/board/basic/file.png'" alt="">
+                                테스트test1234.pdf
+                                <span class="txt">(11.67KB / 다운로드 4회)</span>                                            
+                                <span class="link">
+                                    <a class="btn_line" href="">다운로드<i class="xi-download" aria-hidden="true"></i></a>                                                
+                                </span>
+                            </li>
+                            
+                            <li>
+                                <img src="/upload/skin/board/basic/xls.png" onerror="this.src='/upload/skin/board/basic/file.png'" alt="">
+                                테스트test1234.xls
+                                <span class="txt">(26KB / 다운로드 4회)</span>                                            
+                                <span class="link">
+                                    <a class="btn_line" href="">다운로드<i class="xi-download" aria-hidden="true"></i></a>                                                
+                                </span>
+                            </li>                                        
+                            <li>
+                                <img src="/upload/skin/board/basic/jpg.png" onerror="this.src='/upload/skin/board/basic/file.png'" alt="">
+                                테스트사진2.jpg
+                                <span class="txt">(36.72KB / 다운로드 231회)</span>                                            
+                                <span class="link">
+                                    <a class="btn_line" href="">다운로드<i class="xi-download" aria-hidden="true"></i></a>                                                
+                                </span>
+                            </li>                                        
+                        </ul>
+                    </div>
+                </article>
+
+                <div class="board_btns">	
+                    <p class="txt">* 접수이후로는 수정/삭제가 불가능합니다.</p>
+
+                    <button class="btn type2" type="button">수정</button>                                        
+                    <button class="btn type2" type="button">삭제</button>                                        
+                    <button class="btn type2" type="button">답변</button>
+                    <button class="btn type1" type="button">목록</button>
+                </div>
+
+                <article class="board_reply">
+                    <h2 class="title">진행 상황</h2>
+                    <ul class="info">
+                        <li class="info1"><strong>담당부서</strong><span></span></li>
+                        <li class="info1"><strong>답변일시</strong><span>2020/03/20</span></li>
+                    </ul>
+                    <div class="contents">
+                        저의 답변은요
+                    </div>
+                    
+                    <div class="file">
+                        <strong class="label">첨부파일</strong>
+                        <ul class="list">                                
+                            <li>
+                                KakaoTalk_Snapshot_20200228_165135.png
+                                <span class="txt">(0Byte)</span>
+                                <span class="link">
+                                    <a class="btn_line" href="">다운로드 <i class="xi-download" aria-hidden="true"></i></a>
+                                    <a class="btn_line" href="" target="_blank">미리보기 <i class="xi-search" aria-hidden="true"></i></a>
+                                </span>
+                            </li>                                
+                        </ul>
+                    </div>
+                </article>
+
+                <p class="board_btns">		
+                    <button class="btn type2" type="button">수정</button>
+                    <button class="btn type2" type="button">삭제</button>
+                </p>
+
+                <div class="board_state">	
+                    <strong class="title">부서와 처리상황 선택후 적용 버튼을 선택해 주세요.</strong>
+                    <div class="form">
+                        <form name="replyForm" method="post" action="">
+                            <ul>
+                                <li>
+                                    <label for="dept_code">주관부서</label>
+                                    <span id="dept_name">경영총괄팀</span>
+                                    <span id="dest" style="color:#ff6600;"> </span>
+                                    <button type="button">[부서선택]</button>
+                                </li>
+                                <li>
+                                    <label for="data10">처리기한</label>
+                                    <input type="text" name="data10" class="form_textbox" id="data10" value="" placeholder="예) 0월 0일 00시"> 
+                                </li>
+                                <li>
+                                    <label for="state">처리상황</label>
+                                    <span class="form_select">
+                                        <select name="state" id="state" title="처리상황을 선택해주십시요.">                                                    
+                                            <option value="PROC001">접수</option>                                                    
+                                            <option value="PROC002">진행중</option>                                                    
+                                            <option value="PROC003" selected="selected">답변완료</option>                                                    
+                                            <option value="PROC004">처리완료</option>                                                    
+                                        </select>
+                                    </span>				
+                                </li>
+                            </ul>
+                            
+                            <button class="btn" type="submit">적용</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+
+    <article class="group active">
+        <h3><a href="">작성 <small>/ease_src/board/board_form***.jsp, /ease_src/gallery/gallery_form***.jsp</small></a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <div class="board_list">
+                    <table class="tstyle_write">
+                        <caption>일반게시판(BOD) 게시글 쓰기</caption>
+                        <colgroup><col width="15%"><col></colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="title">제목<span class="point1" title="필수입력 항목"> *</span></label></th>
+                                <td><input class="form_textbox" type="text" name="title" id="title" value="" maxlength="100" placeholder="제목을 입력하세요."></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="m_name">작성자<span class="point1" title="필수입력 항목"> *</span></label></th>
+                                <td><input type="text" class="form_textbox" name="m_name" id="m_name" value="" maxlength="12"></td>
+                            </tr>
+                            <tr>                                            
+                                <th scope="row"><label for="tel">연락처</label><span class="point1" title="필수입력 항목"> *</span></th>
+                                <td colspan="3"><input type="text" name="tel" id="tel" value="" class="form_textbox"></td>                                            
+                            </tr>                                    
+                            <tr>
+                                <th scope="row">공개/비공개</th>
+                                <td colspan="3">
+                                    <span class="form_radio">
+                                        <input type="radio" name="open_yn" id="open_ynY" value="Y" checked="checked"> <label for="open_ynY">공개</label>
+                                    </span>                                                
+                                    <span class="form_radio">
+                                        <input type="radio" name="open_yn" id="open_ynN" value="N"> <label for="open_ynN">비공개</label>
+                                    </span>
+                                </td>
+                            </tr>       
+                            <tr>
+                                <th scope="row"><label for="passwd">비밀번호<span class="point1" title="필수입력 항목"> *</span></label></th>
+                                <td><input type="password" autocomplete="off" class="form_textbox" name="passwd" id="passwd" value="" maxlength="12"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">발행년월</th>
+                                <td colspan="3">
+                                    <span class="form_select">
+                                        <select name="data03" title="발행년월 중 년">
+                                            <option value="2020">2020년</option>   
+                                        </select>
+                                    </span>
+                                    <span class="form_select">
+                                        <select name="data04" title="발행년월 중 월">
+                                            <option value="1">1월</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="cg_code">분류<span class="point1" title="필수입력 항목"> *</span></label></th>
+                                <td>
+                                    <span class="form_select">
+                                        <select class="W30" id="cg_code" name="cg_code">
+                                            <option value="">선택하세요</option>
+                                            <option value="C01">분류1</option>                                                        
+                                            <option value="C02">분류2</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당부서</th>
+                                <td colspan="3">
+                                    <input type="hidden" name="dept_code" id="dept_code" value="">
+                                    <span id="dept_name" style="vertical-align:-2px;"> </span>
+                                    <span id="dest" style="color:#ff6600;"> </span>
+                                    <a href="#" class="btn_line">부서변경<i class="xi-sitemap" aria-hidden="true"></i></a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th scope="row">행사일자</th>
+                                <td colspan="3">
+                                    <input class="form_textbox" type="text" title="행사 시작일" id="view_sdate" name="view_sdate" value="" size="10" maxlength="10"> ~
+                                    <input class="form_textbox" type="text" title="행사 마지막일" id="view_edate" name="view_edate" value="" size="10" maxlength="10">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="data01">행사기간</label></th>
+                                <td colspan="3"><input class="form_textbox" type="text" name="data01" id="data01" value="" maxlength="100"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="data02">행사장소</label></th>
+                                <td colspan="3"><input class="form_textbox" type="text" name="data02" id="data02" value="" maxlength="100"></td>
+                            </tr>                                    
+                            <tr>
+                                <th scope="row">내용</th>
+                                <td class="contents">에디터</td>
+                            </tr>
+                            <tr class="file active">
+                                <th scope="row">첨부파일</th>
+                                <td>
+                                    <img src="/upload/skin/board/basic/pdf.png" alt="첨부파일"><!--파일명--> 테스트test1234.pdf
+                                    <a href="" class="btn_del"> [파일삭제]</a>
+                                </td>
+                            </tr>
+                            <tr class="file">
+                                <th scope="row"><label for="filename0">첨부파일</label></th>
+                                <td>
+                                    <span class="form_file">
+                                        <input class="file" type="file" name="filename0" id="filename0" title="첨부파일0">
+                                        <span class="txt">hwp,xls,doc,ppt,pdf,zip,jpg,gif,png 파일만, 5MB까지 업로드가 가능합니다.</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <article class="kogl_open">
+                    <div class="board_box type2">
+                        <i class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/title_codetype.gif" alt=""></i>
+                        <h2 class="title">공공누리 적용</h2>
+                        <p class="desc">
+                            저작권법 24조의2에 따라 국가나 지방자치단체, 공공기관이 업무상 작성하여 공표한 저작물이나 
+                            저작재산권 전부를 보유한 저작물은 국민이 허락 없이 이용할 수 있으며, 이에 따라 개방기관은 공공저작물 자유이용에 관한 표시를 하여야 합니다.<br>
+                            
+                            <a href="http://www.kogl.or.kr/open/info/character.do" target="_blank" class="btn_line">상세내용 : 공공누리 홈페이지 참조 <i class="xi-external-link" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                    
+                    <div class="group">
+                        <ul>
+                            <li class="form_radio">
+                                <input type="radio" name="data10" id="koglType1" value="1" onclick="fnKoglTypeSet(this);">
+                                <label for="koglType1">
+                                    <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode1.jpg" alt=""></span> 
+                                    1유형 : 출처표시 (상업적 이용 및 변경 가능)
+                                </label>
+                            </li>
+                            <li class="form_radio">
+                                <input type="radio" name="data10" id="koglType2" value="2" onclick="fnKoglTypeSet(this);">
+                                <label for="koglType2">
+                                    <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode2.jpg" alt=""></span>  
+                                    2유형 : 출처표시 + 상업적이용금지
+                                </label>
+                            </li>
+                            <li class="form_radio">
+                                <input type="radio" name="data10" id="koglType3" value="3" onclick="fnKoglTypeSet(this);">
+                                <label for="koglType3">
+                                    <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode3.jpg" alt=""></span>  
+                                    3유형 : 출처표시 + 변경금지
+                                </label>
+                            </li>
+                            <li class="form_radio">
+                                <input type="radio" name="data10" id="koglType4" value="4" onclick="fnKoglTypeSet(this);">
+                                <label for="koglType4">
+                                    <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode4.jpg" alt=""></span>  
+                                    4유형 : 출처표시 + 상업적이용금지 + 변경금지
+                                </label>
+                            </li>
+                            <li class="form_radio">
+                                <input type="radio" name="data10" id="koglType5" value="5" onclick="fnKoglTypeSet(this);">
+                                <label for="koglType5">
+                                    <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode0.jpg" alt=""> </span> 
+                                    자유이용 불가 (저작권법 제24조의2 제1항 제1호 ~ 4호 중 어느 하나에 해당됨)
+                                </label>
+                            </li>
+                        </ul>
+                
+                        <p class="txt_right">
+                            <a href="http://www.law.go.kr/법령/저작권법" target="_blank" class="btn_line">해당사항 확인 (국가법령정보센터) <i class="xi-external-link" aria-hidden="true"></i></a>
+                        </p>
+                        
+                        <strong class="label">유형선택 적용예시</strong>
+                        
+                        <p class="kogl codeView01">
+                            <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode1.jpg" alt=""></span> 
+                            <span class="txt">본 공공저작물은 공공누리 "출처표시" 조건에 따라 이용할 수 있습니다.</span>
+                        </p>
+                        
+                        <p class="kogl codeView02 hide">
+                            <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode2.jpg" alt=""></span> 
+                            <span class="txt">본  공공저작물은  공공누리  “출처표시+상업적이용금지”  조건에  따라  이용할  수  있습니다.</span>
+                        </p>
+                        <p class="kogl codeView03 hide">
+                            <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode3.jpg" alt=""></span> 
+                            <span class="txt">본  공공저작물은  공공누리  “출처표시+변경금지”  조건에  따라  이용할  수  있습니다.</span>
+                        </p>
+                        <p class="kogl codeView04 hide">
+                            <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode4.jpg" alt=""></span>  
+                            <span class="txt">본  공공저작물은  공공누리  “출처표시+상업적이용금지+변경금지”  조건에  따라  이용할  수  있습니다.</span>
+                        </p>
+                        <p class="kogl codeView05 hide">
+                            <span class="img"><img src="http://www.kogl.or.kr/open/web/images/images_2014/codetype/img_opencode0_1.jpg" alt=""></span> 
+                            <span class="txt">자유이용을 불가합니다.</span>
+                        </p>
+                    </div>
+                
+                    <ul class="bul depth2">
+                        <li><strong style="color:red;">공공누리 제2~4유형</strong>의 적용은 공동저작물 등 제3자의 권리가 포함된 저작물에 한하여 제3자의 이용허락 범위에 따라 <strong style="color:red;">제한적으로 적용</strong></li>
+                        <li>공공저작권 관련 상담센터 <span class="sr_only">전화</span> <i class="xi-call" aria-hidden="true"></i> 1670-0052</li>
+                    </ul>
+                </article>
+            </div>
+
+            <pre class="brush: html gutter: false;"></pre>
+        </div>
+    </article>
+</section>

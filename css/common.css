@@ -1,71 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900");
-@import url("/font/webfonts_NotoSansKR.css");
-@import url("/font/webfonts_NanumSquare.css");
-@import url("/font/dingbat_xeicon.css");
-/*-------------------------------------------------
-title       : 초기화
-Author      : 플랜아이 광주
-Create date : 2020-03-02
--------------------------------------------------*/
-*, *::before, *::after { -webkit-box-sizing: inherit; box-sizing: inherit; }
-
-html { overflow: hidden; overflow-y: auto; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 10px; }
-
-body { overflow: hidden; margin: 0; padding: 0; font-size: 1.6rem; line-height: 1.5625; font-family: "Roboto", "Noto Sans KR"; font-weight: 300; color: #555; }
-
-header, footer, main, section, article, nav, aside { display: block; }
-
-ul, ol, li, dl, dt, dd { margin: 0; padding: 0; list-style: none; }
-
-h1, h2, h3, h4, h5, h6, p, form, figure, figcaption { margin: 0; padding: 0; }
-
-fieldset, hr { display: block; margin: 0; padding: 0; border: 0 none; }
-
-input, select { max-width: 100%; vertical-align: middle; }
-
-input, select, button, textarea, optgroup { margin: 0; font-family: inherit; font-size: inherit; color: inherit; }
-
-select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-
-select::-ms-expand { display: none; }
-
-address, em, i { font-style: normal; }
-
-strong { font-weight: 600; }
-
-a { color: inherit; text-decoration: none; }
-
-button { padding: 0; border: 0 none; background: none; cursor: pointer; }
-
-input[type='submit'] { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-
-img { max-width: 100%; border: 0 none; font-size: 0; vertical-align: middle; }
-
-table { width: 100%; border-collapse: collapse; }
-
-caption, legend, .sr_only, .hidden, .blind, .IR { overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0 none; clip: rect(0, 0, 0, 0); }
-
-.bx-wrapper .bx-loading { display: none; }
-
-.bx-wrapper .bx-viewport { -webkit-box-shadow: 0 0 0 transparent; box-shadow: 0 0 0 transparent; }
-
-#skip_nav { position: absolute; left: 0; top: -1000px; width: 100%; height: 0px; z-index: 1000; line-height: 0px; font-size: 0px; }
-
-#skip_nav a { display: block; text-align: center; width: 100%; line-height: 0px; font-size: 0px; }
-
-#skip_nav a:focus, #skip_nav a:hover, #skip_nav a:active { position: absolute; left: 0px; top: 1000px; padding: 8px 0; display: block; height: 30px; background: #20262c; font-size: 12px; font-weight: bold; line-height: 18px; color: #fff; }
-
-.txt_left { text-align: left !important; }
-
-.txt_center { text-align: center !important; }
-
-.txt_right { text-align: right !important; }
-
-@media (max-width: 1280px) { html { font-size: 9px; } }
-
-@media (max-width: 768px) { html { font-size: 8px; } }
-
+@import url("default.css");
 /*-------------------------------------------------
 title       : 가이드
 Author      : ㅈㅁㅈ
@@ -125,6 +59,14 @@ Create date : 2019-04-03
 
 #guide > main > .page > h1 { font-size: 3.5rem; font-weight: 600; color: #1d1c1c; }
 
+#guide > main > .page > h1 + .btn { height: 5rem; border: 2px solid #3f3f3f; line-height: 4.6rem; font-size: 1.7rem; position: absolute; right: 0; top: 0; z-index: 10; width: 15rem; background-color: #fff; font-weight: 400; color: #181818; text-align: center; }
+
+#guide > main > .page > h1 + .btn::after { display: inline-block; position: relative; top: 1px; font-family: "xeicon"; vertical-align: top; position: relative; top: -0.2rem; margin-left: 1.5rem; content: ''; vertical-align: middle; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
+#guide > main > .page > h1 + .btn.active::after { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+
+#guide > main > .page > h1 + .btn.fixed { position: fixed; top: 3.5rem; right: auto; left: 50%; -webkit-transform: translateX(58rem); transform: translateX(58rem); }
+
 #guide > main > .page > .section + .section { margin-top: 3rem; }
 
 #guide > main > .page > .section > h2 { font-size: 2.5rem; margin-bottom: 3rem; padding-top: 3rem; font-weight: 600; color: #333b43; }
@@ -137,9 +79,9 @@ Create date : 2019-04-03
 
 #guide > main > .page > .section > .group > .item .cont > hr { height: 1rem; }
 
-#guide > main > .page > .section > .group > .item .cont + div { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; }
+#guide > main > .page > .section > .group > .item .cont + div { margin: 1rem 0 3rem; border: 1px solid #ddd; }
 
-#guide > main > .page > .section > .group > .item .cont + div.active { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; margin-top: 3rem; border: 1px solid #ddd; }
+#guide > main > .page > .section > .group > .item .cont + div.disable { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; margin-top: 0; border: 0 none; }
 
 #guide > main > .page > .section > .group > .item .cont + div + .btn { height: 4rem; border: 1px solid #3e7fc7; line-height: 3.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.6rem; display: inline-block; min-width: 13.5rem; padding: 0; background-color: #3e7fc7; color: #fff; text-align: center; vertical-align: middle; -webkit-transition: all 0.2s; transition: all 0.2s; display: block; min-width: 0; width: 13.5rem; margin: 2.5rem auto; }
 

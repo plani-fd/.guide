@@ -1,0 +1,441 @@
+<h1>규칙가이드</h1>   
+
+<section class="section">
+    <h2>마크업</h2>
+
+    <div class="markup">
+        <span class="box type2">#skip_nav</span>
+
+        <div class="box type1">
+            #wrap
+
+            <ul class="depth1">
+                <li class="box type2">#issue</li>
+                <li class="box type2">.topbanner</li>
+                <li>
+                    #header
+
+                    <div class="box type1">
+                        .header_wrap
+
+                        <ul class="depth2">
+                            <li>#logo</li>
+                            <li>#hnb</li>
+                            <li>.search</li>
+                            <li>#gnb1</li>
+                            <li>#gnb2</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    #main
+
+                    <div class="box type1">
+                        .main_wrap
+
+                        <ul class="depth2">
+                            <li>#visual</li>
+                            <li class="sub">#snb</li>
+                            <li>
+                                #contents
+                                <ul class="depth3">
+                                    <li>
+                                        .contents_util
+                                        <ul class="depth4">
+                                            <li>#contents_title</li>
+                                            <li>
+                                                .location
+                                                <ul class="depth5">
+                                                    <li>.path</li>
+                                                    <li>.list</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                .util
+                                                <ul class="depth5 type1">
+                                                    <li>.zoom</li>
+                                                    <li>.share</li>
+                                                    <li>.print</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>#contents_body</li>
+                                    <li>
+                                        .contents_info
+                                        <ul class="depth4">
+                                            <li>.kogl</li>
+                                            <li>.duty</li>
+                                            <li>
+                                                .group
+                                                <ul class="depth5">
+                                                    <li>#satisfy</li>
+                                                    <li>.qr</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>#quick</li>
+                            <li>.footbanner</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    #footer
+
+                    <div class="box type1">
+                        .footer_wrap
+
+                        <ul class="depth2">
+                            <li>#fnb</li>
+                            <li>.related</li>
+                            <li>#siteinfo</li>
+                            <li>.mark</li>
+                            <li>.btn_top</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <article class="group active">
+        <h3><a href="">body</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="bul ">
+                    <li>
+                        <strong>#skip_nav</strong>                                    
+                    </li>                                
+                    <li>
+                        <strong>#wrap</strong>   
+                        <ul class="bul ">                                        
+                            <li><strong>#layerPopup0</strong>  : 레이어 팝업</li>   
+                            <li><strong>#issue</strong>  : 레이어 슬라이드 팝업</li>                                     
+                            <li><strong>.topbanner</strong>  : 최상단 슬라이드 배너</li>
+                            <li><strong>#header</strong> 
+                                <ul class="bul ">
+                                    <li>.header_wrap</li>
+                                </ul>
+                            </li>
+                            <li><strong>#main</strong>
+                                <ul class="bul ">
+                                    <li>.main_wrap</li>
+                                </ul>
+                            </li>
+                            <li><strong>#footer</strong></li>
+                                <ul class="bul ">
+                                    <li>.footer_wrap</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <article class="group active">
+        <h3><a href="">header_wrap</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="bul ">
+                    <li>
+                        <strong>#logo</strong>                                    
+                    </li>                                
+                    <li>
+                        <strong>#hnb</strong>
+                        <ul class="bul ">                                        
+                            <li>.hnb1</li>   
+                            <li>.hnb2</li> 
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>.search</strong>                                    
+                    </li>                                
+                    <li>
+                        <strong>#gnb1 : pc 메뉴</strong>
+                        <ul class="bul ">                                        
+                            <li>#head_menu</li>   
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>#gnb2 : 햄버거 메뉴</strong>
+                        <ul class="bul ">                                        
+                            <li>#head_menu_all</li>   
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <article class="group active">
+        <h3><a href="">main_wrap</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="bul ">
+                    <li>
+                        <strong>#visual</strong>                                    
+                    </li>                                
+                    <li>
+                        <strong>#contents</strong>
+                        <ul class="bul ">                                        
+                            <li>.section section1</li>   
+                            <li>.section section2</li> 
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>#quick</strong>                                    
+                    </li>                                
+                    <li>
+                        <strong>.footbanner</strong>                                   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <article class="group active">
+        <h3><a href="">footer_wrap</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="bul ">
+                    <li>
+                        <strong>#fnb</strong> 
+                        <ul class="bul ">                                        
+                            <li>.fnb1</li>   
+                            <li>.fnb2</li> 
+                        </ul>                                  
+                    </li>                                
+                    <li>
+                        <strong>.related</strong>     
+                        <ul class="bul ">                                        
+                            <li>.group group1</li>   
+                            <li>.group group2</li> 
+                        </ul>                               
+                    </li>
+                    <li>
+                        <strong>#siteinfo</strong>                                    
+                    </li>                                
+                    <li>
+                        <strong>.mark</strong>                                   
+                    </li>
+                    <li>
+                        <strong>.btn-top</strong>                                   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article> -->
+</section>
+
+<section class="section">
+    <h2>파일/폴더 구조</h2>
+
+    <div class="folder">
+        <ul>
+            <li>
+                .vscode
+                <ul>
+                    <li class="file">settings.json <small>scss 컴파일 세팅 파일</small></li>
+                </ul>
+            </li>
+            <li>
+                css
+                <ul>
+                    <li class="css">board.css <small>게시판 스타일</small></li>
+                    <li class="css">common.css <small>기본스타일 및 게시판/회원 공통 스타일</small></li>
+                    <li class="css">modalpopup.css <small>메인 모달 팝업 스타일</small></li>
+                    <li class="css">topbanner.css <small>최상단팝업 스타일</small></li>
+                </ul>
+                
+            </li>
+            <li>
+                font
+                <ul>
+                    <li>xeicon <small>폰트 파일은 폰트명 폴더 안에</small></li>
+                    <li class="css">dingbat_xeicon.css <small>XEIcon 2.3.3</small></li>
+                    <li class="css">webfonts_NanumSquare.css <small>나눔스퀘어</small></li>
+                    <li class="css">webfonts_NotoSansKR.css <small>본고딕</small></li>
+                </ul>                            
+            </li>
+            <li>
+                html
+                <ul>
+                    <li>
+                        a1 <small>사이트 코드</small>
+                        <ul>
+                            <li>
+                                01 <small>대메뉴 코드</small>
+                                <ul>
+                                    <li class="file">0101010101.jsp <small>콘텐츠 페이지</small></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                jquery
+                <ul>
+                    <li>
+                        css
+                        <ul>
+                            <li class="css">jquery.bxslider.css <small>BxSlider v4.1.2</small></li>
+                            <li class="css">jquery.mCustomScrollbar.min.css <small>jquery mousewheel plugin 3.1.13</small></li>
+                        </ul>
+                    </li>
+                    <li>
+                        js
+                        <ul>
+                            <li class="js">jquery-1.11.2.min.js <small>jQuery v1.11.2</small></li>
+                            <li class="js">jquery-2.2.4.min.js <small>jQuery v2.2.4</small></li>
+                            <li class="js">jquery-ui.js <small>jQuery UI - v1.11.4</small></li>
+                            <li class="js">jquery-ui.min.js <small>jQuery UI minify</small></li>
+                            <li class="js">jquery.bxslider.js <small>BxSlider v4.1.2</small></li>
+                            <li class="js">jquery.bxslider.min.js <small>BxSlider minify</small></li>
+                            <li class="js">jquery.fullPage.min.js <small>fullPage 2.8.6</small></li>
+                            <li class="js">jquery.mCustomScrollbar.concat.min.js <small>jquery mousewheel plugin 3.1.13</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                main <small>사이트별 폴더</small>
+                <ul>
+                    <li>
+                        .guide <small>가이드 폴더</small>
+                        <ul>
+                            <li>css</li>
+                            <li>img</li>
+                            <li>js</li>
+                            <li class="file">board.html <small>게시판</small></li>
+                            <li class="file">contents.html <small>콘텐츠</small></li>
+                            <li class="file">default.html <small>기본스타일</small></li>
+                            <li class="file">header.html <small>공통 상단</small></li>
+                            <li class="file">member.html <small>멤버십</small></li>
+                            <li class="file">style.html <small>규칙가이드</small></li>
+                        </ul>
+                    </li>
+                    <li>
+                        css <small>컴파일된 css 파일</small>
+                        <ul>
+                            <li>
+                                scss <small>scss 파일만</small>
+                                <ul>
+                                    <li class="css">basic.scss <small>mixin 모음</small></li>
+                                    <li class="css">contents_respond.scss <small>콘텐츠 반응형 스타일</small></li>
+                                    <li class="css">contents.scss <small>콘텐츠 스타일</small></li>
+                                    <li class="css">default.scss <small>초기화</small></li>
+                                    <li class="css">layout_respond.scss <small>레이아웃 반응형 스타일</small></li>
+                                    <li class="css">layout.scss <small>레이아웃 스타일</small></li>
+                                    <li class="css">main_respond.scss <small>메인 반응형 스타일</small></li>
+                                    <li class="css">main.scss <small>메인 스타일</small></li>
+                                    <li class="css">sub_respond.scss <small>서브 반응형 스타일</small></li>
+                                    <li class="css">sub.scss <small>서브 스타일</small></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        img <small>이미지 폴더</small>
+                        <ul>
+                            <li>contents <small>콘텐츠 페이지에 사용된 이미지</small></li>
+                            <li>layout <small>레이아웃 영역에 사용된 이미지</small></li>
+                            <li>main <small>메인 페이지에 사용된 이미지</small></li>
+                            <li>sub <small>서브 페이지 공통영역에 사용된 이미지</small></li>
+                        </ul>
+                    </li>
+                    <li>
+                        js
+                        <ul>
+                            <li class="js">layout.js <small>레이아웃 영역에 사용된 스크립트</small></li>
+                            <li class="js">main.js <small>메인 페이지에 사용된 스크립트</small></li>
+                            <li class="js">sub.js <small>서브 페이지에 사용된 스크립트</small></li>
+                        </ul>
+                    </li>
+                    <li>
+                        menu
+                        <ul>
+                            <li class="file">after01.jsp <small>주메뉴 중 메뉴 이후에 마크업 추가</small></li>
+                            <li class="file">before01.jsp <small>주메뉴 중 메뉴 이전에 마크업 추가</small></li>
+                        </ul>
+                    </li>
+                    <li class="file">etc_menu_navigator.jsp <small>서브 페이지 중 이전 다음 메뉴로 이동</small></li>
+                    <li class="file">etc_menu.jsp <small>최상단 팝업 영역</small></li>
+                    <li class="file">main.jsp <small>메인 페이지</small></li>
+                    <li class="file">user_foot_menu.jsp <small>하단 영역</small></li>
+                    <li class="file">user_head_menu.jsp <small>상단 영역</small></li>
+                    <li class="file">visual_area.jsp <small>서브 비주얼 영역</small></li>
+                </ul>
+            </li>
+            <li>
+                uplode
+                <ul>
+                    <li>
+                        skin
+                        <ul>
+                            <li class="css">member.css <small>멤버십 스타일</small></li>
+                            <li>
+                                board
+                                <ul>
+                                    <li class="css">basic.css <small>게시판 스타일</small></li>
+                                </ul>
+                            </li>
+                            <li>
+                                gallery
+                                <ul>
+                                    <li class="css">basic.css <small>이미지형 게시판 스타일</small></li>
+                                </ul>
+                            </li>
+                            <li>
+                                search
+                                <ul>
+                                    <li class="css">search.css <small>통합검색 스타일</small></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <h2>네임규칙</h2>
+
+    <article class="group active">
+        <h3><a href="">표기법</a></h3>
+
+        <div class="item">
+            <div class="cont">
+                <ul class="bul depth1">
+                    <li>스네이크 표기법(underbar_nate), 한자리수 번호 (예 : .main_wrap, .section1)</li>
+                    <li>한 개의 단어로 구성된 경우 영문 소문자 작성을 기본으로 하며 숫자는 맨 앞에 나올 수 없다.</li>
+                    <li>'_' 는 2개 이상의 단어 조합시 사용한다. 예) header_wrap</li>
+                    <li>단어와 숫자 조합시 언더스코어'_'를 생략한다. 예) group1</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="section">
+    <h2>기타</h2>
+
+    <article class="group active">
+        <ul class="bul depth1 item">
+            <li>스타일 작성 시 가상선택자에 텍스트 정보 제공하지 않는다. (접근성 문제)</li>
+            <li>a 요소 안에 블록 요소 있을 경우 a에 무조건 display: block (접근성 문제)</li>
+            <li>폼 요소를 커스텀 할 경우 :focus 스타일이 별도로 존재해야 한다. (접근성 문제)</li>
+            <li>부모 요소가 display: table-cell 인 경우 자식 요소에 height: 100% 사용하지 않는다. (익스에서 안 됨)</li>
+            <li>콘텐츠 페이지 마크업 시 메뉴 넘버로 클래스명 주지 않는다. 예) sub010101 (메뉴 순서가 변경될 경우 혼란을 야기할 수 있음)</li>
+            <li>예약어 : section, group, item, cont, label, title, desc, txt, icon, img, bg, more, open, close, btn</li>
+        </ul>
+    </article>
+</section>
